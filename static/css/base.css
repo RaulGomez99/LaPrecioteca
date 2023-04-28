@@ -1,0 +1,263 @@
+:root {
+    --background: #EFECE1;
+    --foreground: #D3CCB4;
+}
+
+body {
+    background-color: var(--background);
+}
+
+.carrusel::-webkit-scrollbar {
+    display: none;
+}
+
+.carrusel {
+    margin: 0 auto;
+    background-color: var(--foreground);
+    border-radius: 0 0 10px 10px;
+    width: 90vw;
+    height: 27vh;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+
+.product {
+    margin-left: 30px;
+    height: 90%;
+    width: 15%;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    background-color: white;
+    flex: 0 0 auto;
+    cursor: pointer;
+}
+
+.product:last-child {
+    margin-right: 30px;
+}
+
+.product .image_div {
+    width: 100%;
+    height: 80%;
+    text-align: center;
+}
+
+.product .image_div .image {
+    width: 80%;
+    height: 100%;
+    border-radius: 10px;
+    margin-top: -22px;
+}
+
+.product .logo {
+    height: 25px;
+    width: auto;
+    border-radius: 100%;
+    margin-top: 2px;
+    margin-left: 2px;
+    display: inline;
+    position: relative;
+}
+
+.product .text {
+    width: 100%;
+    height: 19%;
+    margin-top: -22px;
+    text-align: center;
+    font-size: small;
+}
+
+.super {
+    text-align: center;
+    width: 90vw;
+    margin: 0 auto;
+    border-radius: 10px 10px 0 0;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.super .super_name {
+    text-align: center;
+}
+
+.super .logo {
+    border-radius: 100%;
+    height: 25px;
+    width: auto;
+}
+
+.super.hot_products {
+
+    background-color: rgb(255, 0, 102);
+    color: white;
+}
+
+.super.mercadona {
+    background-color: #00ab61;
+}
+
+.super.consum {
+    background-color: #ff9800;
+}
+
+.super.dia {
+    background-color: #FF0000;
+    color: white;
+}
+
+.super.carrefour {
+    background-color: #0970e6;
+}
+
+
+.background_popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 1000vh;
+    z-index: 110;
+}
+
+.popup {
+    display: inline;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30vw;
+    height: 85%;
+    z-index: 200;
+    /* border: 1px solid black; */
+    background-color: var(--foreground);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.popup .title_product {
+    display: block;
+    margin-top: 10px;
+}
+
+.cross_mark {
+    float: right;
+    margin-right: 10px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.popup .image_product_popup {
+    height: 55%;
+    width: 80%;
+    transform: translate(12.5%, 2%);
+    overflow: auto;
+}
+
+.popup .image_product_popup::-webkit-scrollbar {
+    display: none;
+}
+
+.popup .image_product_popup img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.popup .info_product_popup {
+    transform: translate(12.5%, 7%);
+    width: 80%;
+    height: 30%;
+    text-align: left;
+}
+
+.popup .desc_product_popup {
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+    /* transform: translate(12.5%, 10%);    */
+    height: 85%;
+    overflow: auto;
+    text-align: justify;
+}
+
+.popup .desc_product_popup::-webkit-scrollbar {
+    display: none;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--foreground);
+    z-index: 100;
+}
+
+.header .nav_bar {
+    height: 60px;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav_list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.default_nav, .la_precioteca{
+    margin-right: 20px;
+}
+
+.default_nav a {
+    color: var(--background);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    /* text-transform: uppercase; */
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+  
+.default_nav a:hover {
+    color: #f8b500;
+}
+
+.logo_precioteca {
+    height: 80%;
+    width: auto;
+    float: left;
+}
+
+.right_nav {
+    float: right;
+}
+
+.carrito {
+    height: 5%;
+    width: 5%;
+    border: 1px solid black;
+    border-radius: 100%;
+    float: right;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 100px;
+    transition: background-color 0.5s ease;
+}
+
+.carrito.fav {
+    background-color: #f8b500;
+}

@@ -1,0 +1,118 @@
+.main_content {
+    width: 100%;
+    height: calc(100% - 60px);
+    margin-top: 60px;
+}
+
+.filter_zone {
+    position: fixed;
+    left: 0;
+    background-color: var(--foreground);
+    width: 100%;
+    height: 150px;
+    border-radius: 0 0 10px 10px;
+    display: grid;
+    grid-template-columns: 11fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "title title"
+                         "input lupa"
+                         "super super";
+    z-index: 100;
+}
+
+.filter_zone .title{
+    grid-area: title;
+    justify-self: center;
+    align-self: center;
+    font-size: large;
+}
+
+.filter_zone input{
+    grid-area: input;
+    width: 95%;
+    justify-self: center;
+    align-self: center;
+    height: 80%;
+    border-radius: 10px;
+    background-color: var(--background);
+    border: 0.3px solid var(--foreground);
+}
+
+.filter_zone .lupa{
+    grid-area: lupa;
+    justify-self: start;
+    align-self: center;
+    cursor: pointer;
+    color: gray;
+}
+
+.filter_zone .lupa:hover{
+    color: #d58f00;
+}
+
+.filter_zone .super_filter{
+    grid-area: super;
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+    justify-self: center;
+    align-self: center;
+}
+
+.supermarket_filter_logo {
+    height: 30px;
+    width: auto;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.supermarket_filter_logo.no_filter {
+    filter: grayscale(100%);
+}
+
+.product_zone {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    width: calc(100% - 30px);
+    margin-top: 180px;
+}
+
+.product {
+    width: 90%;
+}
+
+@media (max-width: 1200px) {
+    .product_zone {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (max-width: 1000px) {
+    .product_zone {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+    .product_zone {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 600px){
+    .product_zone {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .product_zone {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .popup {
+        width: 90%;
+    }
+}
+

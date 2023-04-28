@@ -1,0 +1,26 @@
+{% load static%}
+<html>
+    <head>
+        <title>La Precioteca</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/register.css' %}">
+        <script src="{% static 'js/register.js' %}"></script>
+    </head>
+    <body>
+        <div class="form_div register_div">
+            <div class="form form_register">
+                {% csrf_token %}
+                <h2 class="form_title"><img class="logo_form" src="{% static 'media/logo1.png' %}"/></h2>
+                <label>Nombre</label> <input name="name" id="name" type="text">
+                <label>Apellidos</label> <input name="surname" id="surname" type="text">
+                <label>Email</label> <input name="email" id="email" type="text">
+                <label>Telefono</label> <input name="tlf" id="tlf" type="text">
+                <label>Nombre de usuario</label> <input name="username" id="username" type="text" class="fila_completa">
+                <label>Password</label> <input name="password1" id="password1" type="password">
+                <label>Repite password</label> <input name="password2" id="password2" type="password">
+                <a class="login_url fila_completa" href="/login/">Login</a>
+                <button class="btn-register" id="register_btn">Registrarse</button>
+            </div>
+        </div>
+    </body>
+</html>

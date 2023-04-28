@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block js %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/filtro.css' %}">
+<script src="{% static 'js/index.js' %}"></script>
+<script src="{% static 'js/carrito.js' %}"></script>
+{% endblock %}
+{%block content%}
+    {% for product in products%}
+        <div class="my-data" data-my-data="{{ product }}"></div>
+    {% endfor %}
+    <div class = "main_content">
+        
+    </div>
+    <div id="insert_popup" />
+{% endblock %}

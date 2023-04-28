@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block js %}
+<script src="{% static 'js/index.js' %}"></script>
+{% endblock %}
+{%block content%}
+    <h1>La Precioteca</h1>
+    <div class = "main_content">
+        {% if hot_products|length > 0%}
+        <div class = "super hot_products"> <span class="super_name">Tendencia</span> <img class="logo" src="https://cdn1.iconfinder.com/data/icons/youtuber/256/hot-finger-like-awesome-trend-fire-512.png"> </div> 
+        <div class = "carrusel">
+            {% for product in  hot_products%} 
+                    <div class = "product" id="{{product.id}}">
+                        <img class = "logo" src = {{product.supermarket.url_logo}}>
+                        <div class = "image_div">
+                            <img class = "image" src = {{product.product_photo}} loading="lazy"/>
+                        </div>
+                        <div class = "text"><strong>{{product.name}}</strong> {{product.price}}€</div>
+                    </div>
+                {% endfor %}
+        </div>
+        {% endif %}
+        <div class="super mercadona"> <span class="super_name">Mercadona</span> <img class="logo" src="{{mercadona_logo}}"></div> 
+        {% if mercadona|length > 0%}
+        <div class = "section">
+             
+            <div class="carrusel">
+                {% for product in  mercadona%}
+                    <div class = "product" id="{{product.id}}">
+                        <img class = "logo" src = {{product.supermarket.url_logo}}>
+                        <div class = "image_div">
+                            <img class = "image" src = {{product.product_photo}} loading="lazy"/>
+                        </div>
+                        <div class = "text"><strong>{{product.name}}</strong> {{product.price}}€</div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        {% if consum|length > 0%}
+        <div class = "section">
+            <div class = "super consum"> <span class="super_name">Consum</span> <img class="logo" src="{{consum_logo}}"></div>  
+            <div class = "carrusel">
+                {% for product in  consum%}
+                    <div class = "product" id="{{product.id}}">
+                        <img class = "logo" src = {{product.supermarket.url_logo}}>
+                        <div class = "image_div">
+                            <img class = "image" src = {{product.product_photo}} loading="lazy"/>
+                        </div>
+                        <div class = "text"><strong>{{product.name}}</strong> {{product.price}}€</div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        {% if dia|length > 0%}
+        <div class = "section">
+            <div class = "super dia"> <span class="super_name">Dia</span> <img class="logo" src="{{dia_logo}}"></div>  
+            <div class = "carrusel">
+                {% for product in  dia%}
+                    <div class = "product" id="{{product.id}}">
+                        <img class = "logo" src = {{product.supermarket.url_logo}}>
+                        <div class = "image_div">
+                            <img class = "image" src = {{product.product_photo}} loading="lazy"/>
+                        </div>
+                        <div class = "text"><strong>{{product.name}}</strong> {{product.price}}€</div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        {% if carrefour|length > 0%}
+        <div class = "section">
+            <div class = "super carrefour"> <span class="super_name">Carrefour</span> <img class="logo" src="{{carrefour_logo}}"></div>  
+            <div class = "carrusel">
+                {% for product in  carrefour%}
+                    <div class = "product" id="{{product.id}}">
+                        <img class = "logo" src = {{product.supermarket.url_logo}}>
+                        <div class = "image_div">
+                            <img class = "image" src = {{product.product_photo}} loading="lazy"/>
+                        </div>
+                        <div class = "text"><strong>{{product.name}}</strong> {{product.price}}€</div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    <div id="insert_popup" />
+{% endblock %}

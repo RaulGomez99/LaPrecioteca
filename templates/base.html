@@ -1,0 +1,25 @@
+{% load static %}
+<html>
+    <head>
+        <title>La Precioteca</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+        {% block js %}
+        {% endblock %}
+    </head>
+    <body>
+        <header class="header">
+            <nav class="nav_bar">
+                <a class="la_precioteca" href="/"><img src="{% static 'media/logo2.png' %}" class="logo_precioteca"></a>
+                <ul class="nav_list">
+                    <li class="default_nav"><a href="/">Inicio<a></li>
+                    <li class="default_nav"><a href="/filtro/">Filtro</a></li>
+                    <li class="default_nav"><a href="/favoritos/">Carrito</a></li>
+                    <li class="default_nav right_nav"><a href="/mi_perfil/">Perfil</a></li>
+                </ul>
+            </nav>
+        </header>
+        {% block content %}
+
+        {% endblock %}
+    </body>
+</html>

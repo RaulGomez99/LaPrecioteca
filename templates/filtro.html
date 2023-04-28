@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block js %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/filtro.css' %}">
+<script src="{% static 'js/index.js' %}"></script>
+<script src="{% static 'js/filtro.js' %}"></script>
+{% endblock %}
+{%block content%}
+
+    {% for product in products%}
+        <div class="my-data" data-my-data="{{ product }}"></div>
+    {% endfor %}
+    <div class = "main_content">
+        <div class="filter_zone">
+            <strong class="title">Filtrado</strong>
+            <input type="text" id="filter_text" placeholder="Escribe aquí para filtrar por nombre">
+            <div id="lupa" class="lupa">🔍︎</div>
+            <div class="super_filter">
+                {% for supermarket in supermarkets %}
+                    <img src="{{supermarket.url_logo}}" id="{{supermarket.id}}" class="supermarket_filter_logo filter_super"/>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="product_zone" id="product_zone">
+
+        </div>
+    </div>
+    <div id="insert_popup" />
+{% endblock %}
