@@ -29,6 +29,14 @@ def product2dict(product):
         "type": product.type
     })
     
+def historic2json(historic):
+    print(historic)
+    fecha = historic['data'].strftime("%Y-%m-%d")
+    return json.dumps({
+        "price": historic['price'],
+        "date": fecha
+    })
+    
 def addSuper2Product(product):
     super_product = Supermarket.objects.get(id = product["supermarket"])
     product["supermarket"] = model_to_dict(super_product)
@@ -174,6 +182,6 @@ def obtenerHistoricoProducto(request, id):
     if not request.user.is_authenticated: return HttpResponse(json.dumps({"error":"No está logueado"}), content_type='application/json')
     hist = History.objects.filter(product__id = id)
     historical = [model_to_dict(h) for h in hist]
-    print(json.dumps({"historical":historical}))
-    return HttpResponse(json.dumps({"historical":historical}), content_type='application/json')
+    hist_json = [historic2json(h) for h in historical]
+    return HttpResponse(json.dumps({"historical":hist_json}), content_type='application/json')
     
