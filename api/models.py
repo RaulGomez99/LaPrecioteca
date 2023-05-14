@@ -93,7 +93,7 @@ class Stars(models.Model):
     rating = models.IntegerField()
    
     def __str__(self):
-        return self.user + str(self.rating)
+        return self.user.username + str(self.rating)
     
 class Comments(models.Model):
     user = models.ForeignKey(User, on_delete = models.CASCADE)

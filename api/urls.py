@@ -28,10 +28,12 @@ urlpatterns = [
     path("login/", views.login_view, name = "login"),
     path("login_user", views.login_user, name = "login_user"),
     path("logout/", views.logout_view, name = "logout"),
-    path("mi_perfil/", views.logout_view, name = "logout"),
+    path("mi_perfil/", views.mi_perfil, name = "mi_perfil"),
     path("filtro/", views.filtro, name = "filtro"),
     path("toggle_fav/<int:id>", views.toggle_fav, name = "toggle_fav"),
     path("favoritos/", views.carrito, name = "carrito"),
     path("historial/<int:id>", views.obtenerHistoricoProducto, name = "historial"),
-    
+    path("rate_product/", views.scoreRating, name = "rate_product"),
+    path("create_random_historic/", views.create_random_historic, name = "create_random_historic"),
+    path("edit_user/", views.edit_user, name = "edit_user")
 ]

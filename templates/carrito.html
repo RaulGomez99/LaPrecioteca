@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block js %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/filtro.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/carrito.css' %}">
 <script src="{% static 'js/index.js' %}"></script>
 <script src="{% static 'js/carrito.js' %}"></script>
 {% endblock %}
@@ -10,7 +10,11 @@
     {% for product in products%}
         <div class="my-data" data-my-data="{{ product }}"></div>
     {% endfor %}
-    <div class = "main_content">
+    <div data-my-data="{{ mercadona_url }}" id="mercadona"></div>
+    <div data-my-data="{{ carrefour_url }}" id="carrefour"></div>
+    <div data-my-data="{{ consum_url }}" id="consum"></div>
+    <div data-my-data="{{ dia_url }}" id="dia"></div>
+    <div class = "main_content" id="main_content">
         
     </div>
     <div id="insert_popup" />

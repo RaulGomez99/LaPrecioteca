@@ -1,0 +1,110 @@
+#main_content {
+    width: 100%;
+    height: calc(100% - 60px);
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.supermarket {
+    width: 40%;
+}
+
+.supermarket .title {
+    width: 100%;
+    text-align: center;
+    justify-self: center;
+}
+
+.supermarket .title.mercadona {
+    background-color: #00ab61;
+}
+
+.supermarket .title.consum {
+    background-color: #ff9800;
+}
+
+.supermarket .title.dia {
+    background-color: #FF0000;
+    color: white;
+}
+
+.supermarket .title.carrefour {
+    background-color: #0970e6;
+}
+
+.supermarket .product_sup {
+    width: 100%;
+    border-bottom: 1px solid black;
+    text-align: center;
+    cursor: pointer;
+    height: 50px;
+}
+
+.supermarket .product_sup img{
+    border-radius: 100%;
+    width: 50px;
+    height: auto;
+    display: inline;
+    float: left;
+}
+
+.supermarket .product_sup .text {
+    height: 50px;
+    text-decoration: none;
+}
+
+.supermarket .product_sup .centrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.supermarket .product_sup{
+    text-decoration: none;
+    color: black;
+}
+
+.product_sup .text.mercadona{
+    background-color: #3dffab;
+}
+
+.product_sup .text.mercadona:hover{
+    background-color: #1ae68d;
+}
+
+.product_sup .text.consum{
+    background-color: #f5bc67;
+}
+
+.product_sup .text.consum:hover{
+    background-color: #ffb64a;
+}
+
+.product_sup .text.dia{
+    background-color: #f85151;
+}
+
+.product_sup .text.dia:hover{
+    background-color: #ff1e1e;
+}
+
+.product_sup .text.carrefour{
+    background-color: #3a93f8;
+}
+
+.product_sup .text.carrefour:hover{
+    background-color: #2084f7;
+}
+
+@media only screen and (max-width: 980px){
+    #main_content {
+        margin-top: 120px;
+    }
+
+    .supermarket {
+        width: 80%;
+    }
+}

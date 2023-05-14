@@ -1,5 +1,5 @@
 :root {
-    --background: #EFECE1;
+    --background: #F5F2EE;
     --foreground: #D3CCB4;
 }
 
@@ -118,6 +118,12 @@ body {
     background-color: #0970e6;
 }
 
+.product_table .product{
+    width: 100%;
+    border: 1px solid black;
+
+}
+
 
 .background_popup {
     position: absolute;
@@ -181,6 +187,7 @@ body {
 }
 
 .popup .desc_product_popup {
+    margin-top: 10px;
     border: 1px solid black;
     border-radius: 10px;
     background-color: white;
@@ -261,3 +268,47 @@ body {
 .carrito.fav {
     background-color: #f8b500;
 }
+
+.popup .rating {
+    display: inline-block;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+ }
+
+ .popup .rating .price_product {
+    font-size: large;
+    font-weight: bold;
+ }
+ 
+ .popup .rating__star {
+    cursor: pointer;
+    color: #dabd18b2;
+ }
+ 
+ .more_info_popup {
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+ }
+
+ /* Cambiar vista para el móvil */
+ @media only screen and (max-width: 980px) {
+    .product {
+        width: 43%;
+    }
+
+    .popup {
+        width: 80vw;
+    }
+
+    .header .nav_bar {
+        height: 100px;
+    }
+
+    .main_content {
+        margin-top: 100px;
+    }
+    
+  }

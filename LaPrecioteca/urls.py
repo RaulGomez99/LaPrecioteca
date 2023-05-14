@@ -16,11 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls import url
+from django.views.generic.base import RedirectView
 
 
 urlpatterns = [
     url(r'^admin/',admin.site.urls),
-    path('', include('api.urls'))
+    path('', include('api.urls')),
+    url(r'^favicon\.ico$', RedirectView.as_view(url='/static/media/favicon.ico')),
 ]
 
 handler404 = 'api.views.error_404'

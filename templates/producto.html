@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block js %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/producto.css' %}">
+<script src="https://kit.fontawesome.com/4228d3f600.js" crossorigin="anonymous"></script>
+<script src="{% static 'js/index.js' %}"></script>
+<script src="{% static 'js/producto.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/Chart.min.js"></script>
+{% endblock %}
+{%block content%}
+    <div class = "product_main_content">
+        <div class="product_photo">
+            <div class="product_title">{{product.name}}</div>
+            <div class="img_prod">
+                {% comment %} <img class = "logo" src = {{product.supermarket.url_logo}}> {% endcomment %}
+                <img src="{{product.photo}}" alt="{{product.name}}" class="product_phot">
+            </div>
+        </div>
+        {% if fav %}
+            <div class="carrito_div"><img src="/static/media/carro.png" class="carrito fav" id="{{product.id}}"></div>
+        {% else %}
+            <div class="carrito_div"><img src="/static/media/carro.png" class="carrito" id="{{product.id}}"></div>
+        {% endif %}
+
+        <div class="product_description">{{product.description}}</div>
+        <canvas id="grafica" class="graph"></canvas>
+        <div class="rating">
+            <div class="rating_flex">
+                <i class="rating__star far fa-star fa-2xl"></i>
+                <i class="rating__star far fa-star fa-2xl"></i>
+                <i class="rating__star far fa-star fa-2xl"></i>
+                <i class="rating__star far fa-star fa-2xl"></i>
+                <i class="rating__star far fa-star fa-2xl"></i>
+            </div>
+            <div class="price_product">{{product.price}}€</div>
+        </div>
+    </div>
+    <div id="rating" data-my-data="{{rating}}"></div>
+    {% for hist in historical%}
+        <div class="my-data" data-my-data="{{ hist }}"></div>
+    {% endfor %}
+{% endblock %}

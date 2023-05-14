@@ -6,6 +6,7 @@ window.onload = () => {
     document.getElementById("lupa").addEventListener("click", filter)
     document.querySelectorAll(".filter_super").forEach(supermarket => supermarket.addEventListener("click", cambiarSuper))
     render(products)
+    document.getElementById("filter_text").addEventListener("keydown", ev => {if(ev.key=="Enter") filter()});
 }
 
 
@@ -38,6 +39,7 @@ function render(products) {
 }
 
 function cambiarSuper(ev) {
+    console.log("ASD")
     ev.preventDefault()
     const supermarket = ev.currentTarget
     if (supermarket.classList.contains("filter_super")) {
@@ -47,6 +49,7 @@ function cambiarSuper(ev) {
         supermarket.classList.remove("no_filter")
         supermarket.classList.add("filter_super")
     }
+    filter()
 }
 
 function filter() {
