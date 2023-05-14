@@ -1,36 +1,39 @@
-asgiref @ file:///tmp/build/80754af9/asgiref_1625643473416/work
-bcrypt @ file:///C:/ci_311/bcrypt_1676435170049/work
-certifi @ file:///C:/b/abs_4a0polqwty/croot/certifi_1683875377622/work/certifi
-cffi @ file:///C:/ci_311/cffi_1676423759166/work
-contourpy @ file:///C:/ci_311/contourpy_1676431756017/work
-cycler @ file:///tmp/build/80754af9/cycler_1637851556182/work
-Django @ file:///tmp/build/80754af9/django_1625585912945/work
-django-cors-headers @ file:///home/conda/feedstock_root/build_artifacts/django-cors-headers_1677341444254/work
+asgiref==3.4.1
+bcrypt==3.2.0
+certifi==2023.5.7
+cffi==1.15.1
+contourpy==1.0.5
+cycler==0.11.0
+Django==3.2.5
+django-cors-headers==3.14.0
 django-model-utils==4.0.0
-djangorestframework @ file:///home/conda/feedstock_root/build_artifacts/djangorestframework_1663854154474/work
+djangorestframework==3.14.0
 fonttools==4.25.0
 jsonfield==3.1.0
-kiwisolver @ file:///C:/ci_311/kiwisolver_1676431979301/work
-matplotlib @ file:///C:/b/abs_49b2acwxd4/croot/matplotlib-suite_1679593486357/work
+kiwisolver==1.4.4
+matplotlib==3.7.1
 mkl-fft==1.3.1
-mkl-random @ file:///C:/ci_311/mkl_random_1676481991689/work
+mkl-random==1.2.2
 mkl-service==2.4.0
 munkres==1.1.4
-numpy @ file:///C:/ci_311/numpy_and_numpy_base_1676426421739/work
-packaging @ file:///C:/b/abs_ed_kb9w6g4/croot/packaging_1678965418855/work
+numpy==1.23.5
+packaging==23.0
 Pillow==9.4.0
+pip==23.0.1
 ply==3.11
-psycopg2 @ file:///C:/ci_311/psycopg2_1676454061167/work
-pycparser @ file:///tmp/build/80754af9/pycparser_1636541352034/work
-pyparsing @ file:///C:/ci_311/pyparsing_1678502182533/work
+psycopg2==2.9.3
+pycparser==2.21
+pyparsing==3.0.9
 PyQt5==5.15.7
-PyQt5-sip @ file:///C:/ci_311/pyqt-split_1676428895938/work/pyqt_sip
-python-dateutil @ file:///tmp/build/80754af9/python-dateutil_1626374649649/work
+PyQt5-sip==12.11.0
+python-dateutil==2.8.2
 pytz==2021.3
-sip @ file:///C:/ci_311/sip_1676427825172/work
-six @ file:///tmp/build/80754af9/six_1644875935023/work
-sqlparse @ file:///tmp/build/80754af9/sqlparse_1602184451250/work
-toml @ file:///tmp/build/80754af9/toml_1616166611790/work
-tornado @ file:///C:/ci_311/tornado_1676423689414/work
-typing_extensions @ file:///opt/conda/conda-bld/typing_extensions_1647553014482/work
+setuptools==65.6.3
+sip==6.6.2
+six==1.16.0
+sqlparse==0.4.1
+toml==0.10.2
+tornado==6.2
+typing_extensions==4.1.1
+wheel==0.38.4
 wincertstore==0.2
