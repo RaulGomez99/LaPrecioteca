@@ -1,0 +1,16 @@
+{
+    "builds": [
+        {
+            "src": "LaPrecioteca/wsgi.py",
+            "use": [
+                "@vercel/python"
+            ]
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "LaPrecioteca/wsgi.py"
+        }
+    ]
+}
